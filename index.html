@@ -1,184 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Thiruvotriyur Kanchi Kamakoti Sankara Mutt</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Georgia, serif;
-      margin: 0;
-      line-height: 1.7;
-      background: #fffdf6;
-      color: #2b2b2b;
-    }
-    header {
-      background: #7b1e1e;
-      color: #fff;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #7b1e1e;
-      border-bottom: 2px solid #e0cfcf;
-      padding-bottom: 5px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      background: #eee;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Thiruvotriyur Sankara Mutt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #fffaf2;
+  color: #2c2c2c;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #6d1414, #a83232);
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating Om */
+header::after {
+  content: "🕉️";
+  font-size: 80px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.15;
+  animation: floatOm 6s ease-in-out infinite;
+}
+
+@keyframes floatOm {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Moving Title */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  animation: glowText 4s ease-in-out infinite;
+}
+
+@keyframes glowText {
+  0% { text-shadow: 0 0 5px #ffd9a0; }
+  50% { text-shadow: 0 0 20px #ffd9a0; }
+  100% { text-shadow: 0 0 5px #ffd9a0; }
+}
+
+header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* NAV */
+nav a {
+  color: #ffe2b5;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fadeUp 1.2s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #7b1e1e;
+  border-bottom: 2px solid #f0c27b;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* DONATION CARD */
+.donate {
+  background: linear-gradient(135deg, #fff1d6, #ffe4b5);
+  border-left: 6px solid #a83232;
+}
+
+/* MAP */
+iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  background: #2c2c2c;
+  color: #eee;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+  header h1 {
+    font-size: 26px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Thiruvotriyur Kanchi Kamakoti Sankara Mutt</h1>
-  <p>South Mada Street, Thiruvotriyur, Chennai – 600019</p>
-  <p>
-  <a href="history.html">History</a> |
-  <a href="festivals.html">Festivals</a>
-  <a href="gallery.html">Gallery</a>
-  </p>
+<header class="hero">
+  <div class="slideshow">
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Thiruvotriyur Kanchi Kamakoti Sankara Mutt</h1>
+
+    <p class="sloka">
+      ॐ सर्वं खल्विदं ब्रह्म<br>
+      HARA HARA SHANKARA , JAYA JAYA SHANKARA
+    </p>
+
+    <nav>
+      <a href="history.html">History</a> |
+      <a href="festivals.html">Festivals</a> |
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2>About the Mutt</h2>
-  <p>
-    The <strong>Kanchi Kamakoti Sankara Mutt</strong> at <strong>Thiruvotriyur</strong> is a revered
-    Hindu spiritual institution associated with the sacred <strong>Kanchi Kamakoti Peetam</strong>.
-    Rooted in the timeless philosophy of <strong>Advaita Vedanta</strong>, the Mutt stands as a
-    centre of devotion, learning, and spiritual peace.
-  </p>
-  <p>
-    Situated near the ancient <strong>Thyagaraja Temple</strong> and <strong>Vadivudai Amman Temple</strong>,
-    the Mutt forms an integral part of Thiruvotriyur’s rich spiritual heritage.
-  </p>
-</section>
 
 <section>
-  <h2>Spiritual Heritage</h2>
-  <p>
-    Thiruvotriyur is one of the oldest spiritual centres of Tamil Nadu.
-    The Sankara Mutt here preserves Vedic traditions, promotes spiritual discipline,
-    and guides devotees on the path of Dharma, Bhakti, and Jnana.
-  </p>
-</section>
 
-<section>
-  <h2>Sacred Adhishtanams</h2>
-  <p>The Mutt houses the Adhishtanams (Jeeva Samadhis) of revered Acharyas:</p>
-  <ul>
-    <li>
-      <strong>Shri Mahadevendra Saraswathy III</strong> – attained Mukti at Thiruvotriyur in 1746 AD
-      after 42 years of pontificate. He authored the commentary <em>Susama</em> on <em>Gururatna Malika</em>.
-    </li>
-    <li>
-      <strong>Sri Chandrchuda III</strong> – attained Mukti in 1524 AD after 17 years of pontificate.
-    </li>
-  </ul>
-  <p>
-    These sacred sites are revered places where devotees offer prayers and seek blessings.
-  </p>
-</section>
+  <div class="card">
+    <h2>About the Mutt</h2>
+    <p>
+      The Thiruvotriyur Sankara Mutt is a sacred spiritual institution
+      associated with the Kanchi Kamakoti Peetam. It stands as a living
+      centre of Advaita Vedanta, Vedic learning, and traditional worship.
+    </p>
+  </div>
 
-<section>
-  <h2>Daily Worship & Practices</h2>
-  <ul>
-    <li>Daily poojas and Vedic chanting</li>
-    <li>Meditation and silent prayer</li>
-    <li>Special rituals on auspicious days</li>
-    <li>Observance of traditional Vedantic practices</li>
-  </ul>
-</section>
+  <div class="card">
+    <h2>Spiritual Importance</h2>
+    <p>
+      Established in connection with the lineage of Adi Shankaracharya,
+      the Mutt conducts daily poojas, Vedic chanting, and spiritual
+      observances in accordance with age-old customs.
+    </p>
+  </div>
 
-<section>
-  <h2>Festivals & Observances</h2>
-  <ul>
-    <li>Shankara Jayanthi</li>
-    <li>Guru Purnima</li>
-    <li>Navaratri</li>
-    <li>Maha Shivaratri</li>
-    <li>Ekadashi and other sacred days</li>
-  </ul>
-</section>
+  <div class="card">
+    <h2>Visit Us</h2>
+    <p>
+      <strong>Address:</strong><br>
+      No. 32, South Mada Street,<br>
+      Thiruvotriyur, Chennai – 600019<br><br>
+      📞 +91 44 2599 3365<br>
+      📱 +91 98402 87293
+    </p>
 
-<section>
-  <h2>Location & How to Reach</h2>
-  <p>
-    <strong>Address:</strong><br>
-    No. 32, South Mada Street,<br>
-    Thiruvotriyur, Chennai – 600019<br><br>
+    <iframe
+      src="https://www.google.com/maps?q=Thiruvotriyur+Kanchi+Kamakoti+Sankara+Madam&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
 
-    <strong>Phone:</strong> +91 44 2599 3365<br>
-    <strong>Mobile:</strong> +91 98402 87293
-  </p>
-  <p>
-    • 300 m from Thyagaraja & Vadivudai Amman Temples<br>
-    • 600 m from Thiruvotriyur Railway Station<br>
-    • 2 km from Thiruvotriyur Bus Depot<br>
-    • 32 km from Chennai Airport
-  </p>
-</section>
-<section>
-  <h2>Visit Us</h2>
-  <p>
-    <strong>Thiruvotriyur Kanchi Kamakoti Sankara Mutt</strong><br>
-    No. 32, South Mada Street,<br>
-    Thiruvotriyur, Chennai – 600019<br><br>
+  <div class="card donate">
+    <h2>Donations & Seva</h2>
+    <p>
+      Devotees may contribute towards Annadhanam, daily poojas,
+      festival services, and upkeep of the Mutt.
+    </p>
+    <p>
+      Kindly contact the Mutt office for donation and seva details.
+    </p>
+    <p>
+      📞 +91 44 2599 3365<br>
+      📱 +91 98402 87293
+    </p>
+  </div>
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+  color: #fff;
+}
 
-    📞 Phone: +91 44 2599 3365<br>
-    📱 Mobile: +91 98402 87293
-  </p>
+/* SLIDESHOW */
+.slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-  <iframe 
-    src="https://www.google.com/maps?q=Thiruvotriyur+Kanchi+Kamakoti+Sankara+Madam&output=embed"
-    width="100%"
-    height="350"
-    style="border:0; border-radius:6px;"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
-</section>
-<section>
-  <h2>Donations & Seva</h2>
-  <p>
-    Devotees who wish to support the sacred activities of the Mutt,
-    including daily poojas, Annadhanam, festivals, and maintenance,
-    may contribute through donations.
-  </p>
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideShow 18s infinite;
+}
 
-  <p>
-    All donations are accepted with devotion and are utilised strictly
-    for spiritual and charitable purposes in accordance with tradition.
-  </p>
+/* CHANGE IMAGES HERE */
+.slide1 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Adi_Shankara.jpg");
+  animation-delay: 0s;
+}
+.slide2 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8f/Indian_temple_south.jpg");
+  animation-delay: 6s;
+}
+.slide3 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Temple_corridor_south_india.jpg");
+  animation-delay: 12s;
+}
 
-  <p>
-    <strong>For Donations & Seva Contributions:</strong><br>
-    📞 Phone: +91 44 2599 3365<br>
-    📱 Mobile: +91 98402 87293
-  </p>
+/* SLIDE ANIMATION */
+@keyframes slideShow {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
 
-  <p>
-    Kindly contact the Mutt office for details regarding
-    Annadhanam, special poojas, or other sevas.
-  </p>
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0,0,0,0.45);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+  animation: glowText 4s ease-in-out infinite;
+}
+
+/* SLOKA */
+.sloka {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #ffe4b5;
+  animation: fadeSloka 5s ease-in-out infinite;
+}
+
+@keyframes fadeSloka {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* NAV */
+.hero nav a {
+  color: #ffd9a0;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+.hero nav a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media(max-width: 600px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  .sloka {
+    font-size: 16px;
+  }
+}
+
 </section>
 
 <footer>
-  <p>
-    © Thiruvotriyur Kanchi Kamakoti Sankara Mutt<br>
-    “May knowledge illuminate the intellect, devotion purify the heart, and service uplift the soul.”
-  </p>
+  <p>© Thiruvotriyur Kanchi Kamakoti Sankara Mutt</p>
+  <p>🕉️ Dharma Protects Those Who Protect It 🕉️</p>
 </footer>
 
 </body>
